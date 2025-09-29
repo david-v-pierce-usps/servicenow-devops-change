@@ -34,7 +34,7 @@ async function tryFetch({
         });
     } catch (error) {
         if (error.message == "500") {
-          throw new Error(`Internal server error. An unexpected error occurred while processing the request.`);
+          throw new Error(`Internal server error. Changing this error message so I know if I'm using the correct action code.`);
         }
 
         if (error.message == "400") {

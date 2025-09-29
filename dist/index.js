@@ -28197,6 +28197,7 @@ async function doFetch({
       httpHeaders = { headers: defaultHeadersForBasicAuth };
     }
     response = await axios.get(endpoint, httpHeaders);
+    console.log(response);
     status = true;
   } catch (err) {
     if (!err.response) {
@@ -28365,7 +28366,7 @@ async function tryFetch({
         });
     } catch (error) {
         if (error.message == "500") {
-          throw new Error(`Internal server error. An unexpected error occurred while processing the request.`);
+          throw new Error(`Internal server error. Changing this text so I know if the correct action code is being used.`);
         }
 
         if (error.message == "400") {
