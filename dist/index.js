@@ -28196,10 +28196,11 @@ async function doFetch({
       };
       httpHeaders = { headers: defaultHeadersForBasicAuth };
     }
-    response = await axios.get(endpoint, httpHeaders);
-    console.log(JSON.Stringify(response));
+    response = await axios.get(endpoint, httpHeaders)
+    console.log(JSON.Stringify(response.data));
     status = true;
   } catch (err) {
+    console.log(JSON.Stringify(err.response));
     if (!err.response) {
       throw new Error("500");
     }
