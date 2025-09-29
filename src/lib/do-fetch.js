@@ -54,7 +54,7 @@ async function doFetch({
       httpHeaders = { headers: defaultHeadersForBasicAuth };
     }
     response = await axios.get(endpoint, httpHeaders);
-    console.log(response);
+    console.log(JSON.Stringify(response));
     status = true;
   } catch (err) {
     if (!err.response) {
