@@ -28196,7 +28196,7 @@ async function doFetch({
       };
       httpHeaders = { headers: defaultHeadersForBasicAuth };
     }
-    response = await axios.get(endpoint, httpHeaders)
+    response = await axios.get(endpoint, httpHeaders);
     console.log(JSON.Stringify(response.data));
     status = true;
   } catch (err) {
