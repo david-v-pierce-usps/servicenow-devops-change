@@ -94,6 +94,7 @@ async function createChange({
     }
     core.debug("[ServiceNow DevOps] Sending Request for Create Change, Request Header :" + JSON.stringify(httpHeaders) + ", Payload :" + JSON.stringify(payload) + "\n");
     try {
+        console.log(JSON.stringify(payload));
         response = await axios.post(postendpoint, JSON.stringify(payload), httpHeaders);
     } catch (err) {
         core.debug("[ServiceNow DevOps] Detailed error information:"+ JSON.stringify(err, null, 2));
